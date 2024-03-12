@@ -157,6 +157,59 @@ pointBtn.addEventListener('click', () => {
 });
 
 const equalBtn = document.querySelector("#equal");
+equalBtn.addEventListener('click', () =>{
+
+    const equation = display.value;
+    const [num1, operator, num2] = equation.split(' ');
+    const result = operate(operator,parseFloat(num1), parseFloat(num2));
+    display.value = result;
+
+});
 
 const display = document.getElementById('display');
 
+function add(num1, num2) {
+
+    return num1 + num2;
+
+};
+
+function sub(num1, num2) {
+
+    return num1 - num2;
+
+};
+
+function mult(num1, num2) {
+
+    return num1 * num2;
+
+};
+
+function div(num1, num2) {
+
+    return num1 / num2;
+
+};
+
+function operate(operator, num1, num2) {
+
+    switch (operator) {
+
+        case "+":
+            return add(num1,num2);
+        
+        case "-":
+            return sub(num1,num2);
+
+        case "x":
+            return mult(num1,num2);
+
+        case "÷":
+            return div(num1,num2);
+
+        default:
+            return "Invalid Equation";
+    }
+
+};
