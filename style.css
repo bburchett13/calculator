@@ -1,4 +1,4 @@
-body {
+/* body {
 
     font-family: monospace;
     font: bold;
@@ -57,9 +57,99 @@ button:hover {
 
 } */
 
-.display {
+/* .display {
 
     background-color: #9a97b4;
 
-}
+} */
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: cornsilk;
+  }
+
+  h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: firebrick;
+  }
+  
+  .calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50vh;
+    width: 50vh;
+    gap: 50px;
+    border: 10px solid black;
+    border-radius: 10px;
+    background-color:black;
+    margin-right: -50px;
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  .calculator,
+  .row {
+    gap: 16px;
+  }
+  
+  .row,
+  #display,
+  button {
+    flex: 1;
+  }
+  
+  #zero {
+    flex: 2.5;
+  }
+  
+  #display,
+  button {
+    font-size: 1.5em;
+  }
+  
+  button,
+  #display {
+    border: 2px solid;
+    border-radius: 5px;
+  }
+  
+  .number,
+  #point {
+    background-color: deepskyblue;
+    border-color: black;
+  }
+  
+  .operator,
+  #clear,
+  #undo {
+    background-color: yellowgreen;
+    border-color: black;
+  }
+  
+  #equal {
+    background-color: lightcoral;
+    border-color:black;
+  }
+  
+  #display {
+    border-color: black;
+    background-color:darkseagreen;
+  }
+
+  #clear {
+    background-color: crimson;
+  }
+
+  #undo {
+    background-color: lightsalmon;
+  }
