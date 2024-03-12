@@ -1,6 +1,7 @@
 body {
     font-family: monospace;
     font-weight: bold;
+    color:black;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
